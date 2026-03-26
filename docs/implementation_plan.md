@@ -16,17 +16,17 @@ Glimpse is a platform that automatically detects products in streaming videos (l
 
 ### [Enterprise SDK]
 Summary: A cross-platform UI/logic library for video players.
-- #### [NEW] [sdk/index.ts](file:///c:/Users/Farhan Mir/Desktop/Projects/Glimpse/sdk/index.ts)
+- #### [NEW] [sdk/index.ts](../sdk/index.ts)
   - Core entry point for platform integration.
   - Abstraction layer for different video players (HTML5, Dash.js, Shaka Player).
-- #### [NEW] [sdk/overlay.css](file:///c:/Users/Farhan Mir/Desktop/Projects/Glimpse/sdk/overlay.css)
+- #### [NEW] [sdk/overlay.css](../sdk/overlay.css)
   - Non-intrusive, premium glowing UI styles.
 
 ### [Vision Backend]
 Summary: High-throughput API for frame analysis.
-- #### [NEW] [backend/main.py](file:///c:/Users/Farhan Mir/Desktop/Projects/Glimpse/backend/main.py)
+- #### [NEW] [backend/main.py](../backend/main.py)
   - API for processing metadata/frames from the SDK.
-- #### [NEW] [backend/product_matching.py](file:///c:/Users/Farhan Mir/Desktop/Projects/Glimpse/backend/product_matching.py)
+- #### [NEW] [backend/product_matching.py](../backend/product_matching.py)
   - Logic to match AI detections with live shopping APIs (Amazon, Google Shopping).
 
 ## UI Design Goals
