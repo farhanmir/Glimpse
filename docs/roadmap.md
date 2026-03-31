@@ -1,23 +1,23 @@
-# Glimpse Project Roadmap
+# Glimpse: Strategic Roadmap
 
-## Phase 1: Foundations & Scaffolding (Current)
-- [ ] Initialize `Backend` with FastAPI & SQLAlchemy.
-- [ ] Develop `Glimpse core SDK` skeleton with Shadow DOM support.
-- [ ] Create a local demo page with a sample HTML5 video player.
-- [ ] Implement "Glow" UI component with CSS animations.
+## Phase 1: MVP (The "Pepsi" Brand Activation)
+**Goal**: A high-fidelity Netflix-clone showing the Glimpse SDK in a production-ready environment.
+- [ ] **Premium Streaming UI**: High-fidelity video dashboard and player experience.
+- [ ] **Glimpse SDK V1**: Core integration library with Shadow DOM isolation and Canvas overlays.
+- [ ] **Real-time Activation**: AI-powered mask for brand placement (e.g., Coke -> Pepsi).
+- [ ] **Shoppable Sidebar**: Premium UI for instant checkout and product discovery.
 
-## Phase 2: Intelligence & Integration
-- [ ] Integrate Gemini 2.0 Flash for object detection.
-- [ ] Implement secure frame transmission from SDK to Backend.
-- [ ] Build the "Product Card" UI that opens when the Glow button is clicked.
-- [ ] Connect to initial shopping APIs (e.g., Amazon Associates).
+## Phase 2: Intelligence & Backend Scaling
+**Goal**: Deepening the computer vision and catalog integration.
+- [ ] **Vision Pipeline**: Low-latency FastAPI processing for real-time frame analysis.
+- [ ] **Brand Catalog**: Robust schema for product datasets and placement metadata.
+- [ ] **Gemini Flash Reasoning**: Context-aware product matching and brand safety.
 
-## Phase 3: Platform Expansion
-- [ ] Build adapters for **YouTube**, **Vimeo**, and **Video.js**.
-- [ ] Research specific DOM-injection strategies for Netflix/HBO (simulated via local mocks).
-- [ ] Implement metadata caching to reduce AI costs.
+## Phase 3: Developer Experience & Multi-Player Support
+**Goal**: Expanding compatibility and providing clear developer interfaces.
+- [ ] **SDK Documentation**: Full API reference for 3rd-party integration.
+- [ ] **Multi-Player Support**: Adapters for Shaka, Dash.js, and HTML5 video players.
+- [ ] **Analytics Dashboard Prototype**: Visualization of engagement and conversion metrics.
 
-## Phase 4: Enterprise & Scale
-- [ ] Multi-tenant Management Dashboard for video creators.
-- [ ] Analytics for product clicks and conversion tracking.
-- [ ] Dedicated support for custom DRM players.
+
+

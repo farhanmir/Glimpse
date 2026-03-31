@@ -9,7 +9,7 @@ Glimpse is a platform that automatically detects products in streaming videos (l
   - Handles UI overlays with negligible performance overhead.
 - **Vision Cloud Platform (FastAPI)**: 
   - Scalable backend for processing frame metadata.
-  - Gemini 2.0 Flash for object recognition and product matching.
+  - Gemini API for object recognition and product matching.
 - **Merchant & Ad Network**: Integration with retailer catalogs to provide real-time buy links.
 
 ## Proposed Changes

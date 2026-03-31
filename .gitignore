@@ -1,0 +1,8 @@
+docs/internal_mission.md
+.gemini/
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+env/
+.env

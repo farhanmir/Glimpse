@@ -1,57 +1,56 @@
-# Glimpse: Technical Architecture
+# Glimpse: Technical Architecture (B2B SDK)
 
-## System Overview
-Glimpse consists of three primary layers:
-1. **Integration Layer (SDK)**: Client-side JS/TS library injected into video players.
-2. **Intelligence Layer (API)**: FastAPI backend for frame analysis and product mapping.
-3. **Commerce Layer (Partnerships)**: External APIs for product catalog retrieval.
+## Vision & Scope
+Glimpse is designed to provide high-scale technical engineering to solve the dual challenges of **low-latency computer vision** and **seamless DOM-isolated UI injection**. This architecture is built to be modular, efficient, and capable of supporting high-traffic streaming environments.
 
 ---
 
+## System Overview
+
+## System Overview
+
 ## 1. Integration Layer (The SDK)
-The SDK is designed to be lightweight and compatible with high-security streaming environments (DRM).
+The SDK is designed for deep integration into host video players.
 
-### Video Player Abstraction
-To support Netflix, HBO, Disney+, etc., the SDK uses an abstraction layer to communicate with different player types:
-- **HTML5 Player**: Direct access to `<video>` element.
-- **Shaka / Dash.js**: Intercepting media segments or using player-specific event listeners.
-- **Proprietary Players**: DOM mutation observers to find the video container and overlay UI.
+### Component Architecture
+- **Glow Controller**: Detects objects in the video and renders a "Glow" effect or branded replacement.
+- **Substitution Engine**: Replaces non-partner products with partner products (e.g., Coke -> Pepsi) using AI-generated overlays or masks.
+- **Shoppable Sidebar**: A slide-out UI for instant checkout, save-for-later, and product details.
 
-### Frame Metadata Capture
-Instead of sending full video streams (too slow), the SDK:
-- Captures high-res snapshots (keyframes) every few seconds during active scenes.
-- Extracts current timestamp and video ID.
-- Sends base64 or binary chunks to the Glimpse API.
-
-### UI Overlay System
-- **Shadow DOM**: To prevent style leaks and maintain high-security isolation on 3rd party sites.
-- **Canvas Overlay**: For precisely mapping the "Glow" effect to detected objects if bounding box data is provided.
+### Security & Isolation
+- **IFrame/Shadow DOM**: The Sidebar and Overlay run in isolated environments to avoid interfering with the host platform's UI/UX.
 
 ---
 
 ## 2. Intelligence Layer (The Backend)
-Built using FastAPI for high concurrency and low latency.
+Built on FastAPI + Gemini Pro/Flash for vision reasoning.
 
-### Vision Processing Workflow
-1. **Receiver**: Accepts frame snapshots from the SDK.
-2. **Scene Analysis**: Uses **Gemini 2.0 Flash** to identify prominent objects in the scene.
-3. **Product Lookup**: Converts AI descriptions into product queries (e.g., "Person wearing blue denim jacket in Netflix movie X").
-4. **Link Generation**: Searches via Google Shopping/Amazon/Affiliate APIs to find the best buy links.
+### Brand Placement Workflow
+1. **Real-time Fragment Analysis**: SDK sends frame-hash and scene metadata.
+2. **Object Recognition**: Gemini identifies objects (e.g., "beverage can", "denim jacket").
+3. **Substitution Logic**:
+   - If the object is a **Partner Product**, show the "Glow" button.
+   - If the object is a **Competitor Product** (e.g., Coke), apply the **Substitution Mask** (e.g., Pepsi branding).
+4. **Link Engine**: Retrieves pre-verified, non-rotating links from the Brand Catalog for instant checkout.
 
 ### Persistence (PostgreSQL/PostGIS)
-- Stores pre-processed metadata for popular movies to minimize AI calls (caching).
-- Tracks user interactions for "Glow" button performance.
+- **Brand Catalog**: Stores high-res textures for substitution and direct checkout links.
+- **Analytics**: Tracks "Views", "Glow Clicks", and "Checkout Conversion" for B2B reporting.
 
 ---
 
 ## 3. Data Flow Diagram
 ```mermaid
 graph TD
-    A[User watching Video] --> B[Glimpse SDK]
-    B -->|Snapshots| C[Glimpse API]
-    C -->|Image Data| D[Gemini 2.0 Flash]
-    D -->|Object List| E[Product Search Engine]
-    E -->|Shopping Links| C
-    C -->|Product JSON| B
-    B -->|Glow Button| A
+    A[Host Platform: Netflix] -->|Integrated SDK| B[Glimpse SDK]
+    B -->|Scene Data| C[Glimpse API]
+    C -->|Identify Object| D[Gemini AI]
+    D -->|Object Match| E[Brand Catalog]
+    E -->|Pepsi Match| C
+    C -->|Substitution Data| B
+    B -->|Render Pepsi Overlay| A
+    B -->|Show Glow Button| A
+    A -->|User Click| F[Shoppable Sidebar]
+    F -->|Buy Now| G[Real Checkout Link]
 ```
+

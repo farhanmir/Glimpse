@@ -15,10 +15,12 @@ Research into existing "shoppable video" and AI product detection platforms.
 
 ## Our Differentiation (The "Glimpse" Edge)
 
-1. **Platform Agnostic (B2B SDK)**: While Amazon and TikTok keep their tech locked in their own apps, **Glimpse** is an SDK that any streaming service (HBO, Disney+, small creators) can drop in.
-2. **Real-time Automated Discovery**: Unlike crowdsourced models (Spotern), Glimpse uses Gemini-powered visual intelligence to detect products instantly as they appear.
-3. **The "Glow" UX**: A non-intrusive, premium design language. Instead of annoying popups, a subtle glow guides users to a curated shopping experience.
-4. **LLM-Powered Reasoning**: Using Gemini 2.0 Flash allows for better contextual understanding (e.g., recognizing specialized gear, vintage items, or matching high-end fashion).
+1. **Brand Placement-as-a-Service (B2B)**: Unlike platforms that just "identify" what's there, Glimpse allows brands to **pay for placement**. A brand like Pepsi can ensure their product is the one that "Glows", or even substitute a competitor's product in real-time.
+2. **Platform Agnostic (SDK-First)**: Glimpse is not a browser extension or a platform; it's a library that Netflix, YouTube, or Hulu can integrate directly into their players.
+3. **AI Substitution Engine**: Frame-by-frame brand replacement using Gemini/Flash to mask and overlay partner branding (e.g., Coke -> Pepsi).
+4. **The "Glow" UX**: A premium, non-intrusive design. A subtle animated glow guides the user to a sidebar for instant checkout or save-for-later.
+5. **Real-time Automated Discovery**: Using Gemini's advanced vision, Glimpse detects products instantly without manual tagging or crowdsourcing.
 
 ## Summary
-The market is shifting from "manual tagging" to "AI-automated discovery." Most current AI solutions are proprietary to big platforms. There is a massive gap for a **third-party SDK** that gives "Amazon X-Ray level" features to every other video platform on the web.
+The market is shifting from "manual tagging" to "AI-automated discovery" and "Dynamic Product Placement." Glimpse occupies the high-end B2B space, providing a turn-key SDK for streaming giants to monetize their content through dynamic, AI-driven commerce.
+
