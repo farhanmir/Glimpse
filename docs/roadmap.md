@@ -1,23 +1,20 @@
 # Glimpse: Strategic Roadmap
 
-## Phase 1: MVP (The "Pepsi" Brand Activation)
-**Goal**: A high-fidelity Netflix-clone showing the Glimpse SDK in a production-ready environment.
-- [ ] **Premium Streaming UI**: High-fidelity video dashboard and player experience.
-- [ ] **Glimpse SDK V1**: Core integration library with Shadow DOM isolation and Canvas overlays.
-- [ ] **Real-time Activation**: AI-powered mask for brand placement (e.g., Coke -> Pepsi).
-- [ ] **Shoppable Sidebar**: Premium UI for instant checkout and product discovery.
+## Phase 1: Core Engine & Unified UI
+- [ ] **Glimpse UI Architecture**: High-fidelity video dashboard with modular overlay system.
+- [ ] **Engine Core V1**: Real-time canvas rendering system for object highlighting and substitution.
+- [ ] **State Synchronization**: Precision timing between video playback and overlay data.
+- [ ] **Interactive Overlays**: Non-intrusive metadata display and interaction layers.
 
-## Phase 2: Intelligence & Backend Scaling
-**Goal**: Deepening the computer vision and catalog integration.
-- [ ] **Vision Pipeline**: Low-latency FastAPI processing for real-time frame analysis.
-- [ ] **Brand Catalog**: Robust schema for product datasets and placement metadata.
-- [ ] **Gemini Flash Reasoning**: Context-aware product matching and brand safety.
+## Phase 2: High-Performance Backend & Migration
+- [ ] **FastAPI Migration**: Refactoring Supabase Edge Function logic into a dedicated backend.
+- [ ] **Spatial Catalog**: PostgreSQL/PostGIS schema for storing pixel-space product coordinates.
+- [ ] **Low-Latency Analysis**: Gemini Flash integration for high-speed frame reasoning.
 
-## Phase 3: Developer Experience & Multi-Player Support
-**Goal**: Expanding compatibility and providing clear developer interfaces.
-- [ ] **SDK Documentation**: Full API reference for 3rd-party integration.
-- [ ] **Multi-Player Support**: Adapters for Shaka, Dash.js, and HTML5 video players.
-- [ ] **Analytics Dashboard Prototype**: Visualization of engagement and conversion metrics.
+## Phase 3: Advanced Optimization & Scaling
+- [ ] **Cache Stratagem**: Optimization of repeated scene metadata to reduce API overhead.
+- [ ] **Advanced State Management**: Precision handling of video seek, pause, and replay events.
+- [ ] **Cross-Platform Readiness**: Abstracting video event handlers for broad player compatibility.
 
 
 
